@@ -1,10 +1,5 @@
-# ptexamples
+# projectTemplate
 
-This R package showcases how RStudio project templates can be defined and
-exposed within R packages. See
-https://rstudio.github.io/rstudio-extensions/rstudio_project_templates.html for
-more information.
+This R package is a fork from https://github.com/rstudio/ptexamples.
 
-Install this package with:
-
-    devtools::install_github("rstudio/ptexamples")
+It set-ups a project with 3 folder (data, src and output).

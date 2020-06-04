@@ -16,5 +16,8 @@ init_project <- function(path, ...) {
   dir.create(file.path(path, "src"))
   dir.create(file.path(path, "data"))
   dir.create(file.path(path, "output"))
+  
+  # Update gitignore file
+  writeLines(c("# R specific files", a, "\n", "# data folder", "data"), ".gitignore")
 
 }

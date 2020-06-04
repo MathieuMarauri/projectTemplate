@@ -1,2 +1,8 @@
 Binding: init_project
 Title: Custom project
+
+Parameter: git
+Widget: CheckboxInput
+Label: Create a git repository
+Default: Off
+Position: left

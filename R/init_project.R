@@ -20,6 +20,9 @@ init_project <- function(path, ...) {
   dir.create("data")
   dir.create("output")
   
+  # create a test.R file
+  file.create("src/test.R")
+  
   # Update gitignore file
   writeLines(c("# R specific files", ".Rhistory", ".Rapp.history", ".RData", ".Ruserdata", ".Rproj.user", "*.Rproj", "", "# data folder", "data"), ".gitignore")
 

@@ -11,6 +11,9 @@ init_project <- function(path, ...) {
 
   # ensure path exists
   dir.create(path, recursive = TRUE, showWarnings = FALSE)
+  
+  # set working directory
+  setwd(file.path(getwd(), path))
 
   # create new folders
   dir.create(file.path(path, "src"))
@@ -21,7 +24,7 @@ init_project <- function(path, ...) {
   # system("cd path; git init")
   
   # Update gitignore file
-  gitignore <- readLines(file.path(path, ".gitignore"))
-  writeLines(c("# R specific files", gitignore, "*.Rproj", "\n", "# data folder", "data"), file.path(path, ".gitignore"))
+  # gitignore <- readLines(file.path(path, ".gitignore"))
+  writeLines(c("# R specific files", ".Rhistory", ".Rapp.history", ".RData", ".Ruserdata", ".Rproj.user", "*.Rproj", "\n", "# data folder", "data"), ".gitignore")
 
 }
